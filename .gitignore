@@ -1,0 +1,4 @@
+.env
+recipeenv
+**/*.pyc
+**/__pycache_/
