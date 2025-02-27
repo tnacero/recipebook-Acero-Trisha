@@ -11,8 +11,5 @@
         {% for ingredient in recipe.ingredients.all %}
             <li>{{ ingredient.ingredient.name }}</li>
         {% endfor %}
-        {% for ingredient in ingredients %}
-            <li>{{ ingredient.name }}, {{ ingredient.quantity }} </li>
-        {% endfor %}
     </ul>
 {% endblock %}

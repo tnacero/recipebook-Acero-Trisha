@@ -9,8 +9,7 @@
     <ul>
         {% for recipe in object_list %}
         <li>
-            {{ recipe }}
-        </li>
+            <a href="{{ recipe.get_absolute_url }}">{{ recipe }}</a>
         {% endfor %}
     </ul>
 {% endblock %}
