@@ -21,6 +21,6 @@ class Recipe(models.Model):
         return reverse('ledger:recipe', args=[self.pk])
     
 class RecipeIngredient(models.Model):
-    quantity = models.IntegerField
+    quantity = models.CharField
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE, related_name="recipe")
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,related_name="ingredients")
