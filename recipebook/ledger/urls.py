@@ -1,4 +1,6 @@
-from django.urls import path 
+"""This file handles the urls."""
+
+from django.urls import path
 from .views import RecipeListView, RecipeDetailView
 
 urlpatterns = [
