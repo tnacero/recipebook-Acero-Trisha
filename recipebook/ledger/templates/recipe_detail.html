@@ -4,17 +4,9 @@
 
 {% block title %} {{ recipe.name }} {% endblock %}
 
+{% block header %} {{ recipe.name }} {% endblock %}
+
 {% block content %}
-    {% if user.is_authenticated %}
-        <form method="POST" action="{% url 'logout' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Logout</button>
-        </form>
-    {% else %}
-        <a href="http://127.0.0.1:8000/accounts/login/">Login</a>
-    {% endif %} 
-    <h3> {{ recipe.name }} </h3>
     <p> {{ recipe.author }} </p>
     <ul>
         {% for ingredient in recipe.ingredients.all %}
