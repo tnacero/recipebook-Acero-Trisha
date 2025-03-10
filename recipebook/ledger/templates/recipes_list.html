@@ -5,6 +5,11 @@
 {% block title %} Recipes List {% endblock %}
 
 {% block content %}
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Logout</button>
+    </form>
     <ul>
         {% for recipe in object_list %}
         <li>
