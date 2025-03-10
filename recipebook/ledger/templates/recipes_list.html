@@ -5,11 +5,15 @@
 {% block title %} Recipes List {% endblock %}
 
 {% block content %}
-    <form method="POST" action="{% url 'logout' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Logout</button>
-    </form>
+    {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="http://127.0.0.1:8000/accounts/login/">Login</a>
+    {% endif %} 
     <ul>
         {% for recipe in object_list %}
         <li>
