@@ -26,6 +26,7 @@ class RecipeCreateView(LoginRequiredMixin, CreateView):
     form_class = RecipeForm
     template_name = 'recipe_create.html'
 
+
 class RecipeImageCreateView(LoginRequiredMixin, CreateView):
     model = RecipeImage
     form_class = RecipeImageForm
