@@ -3,3 +3,4 @@ recipeenv
 **/*.pyc
 **/__pycache_/
 db.sqlite3
+media
